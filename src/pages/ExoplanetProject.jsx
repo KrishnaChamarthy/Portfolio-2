@@ -60,7 +60,7 @@ const ExoplanetProject = () => {
                 }
               }, 100);
             }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-purple-500/50 hover:bg-purple-900/20 transition-all duration-300"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-gray-400/50 hover:bg-purple-900/20 transition-all duration-300"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Projects</span>
@@ -112,7 +112,7 @@ const ExoplanetProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-400">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h2 className="text-3xl font-bold mb-6 text-center">Project Overview</h2>
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
@@ -133,11 +133,11 @@ const ExoplanetProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Technology Stack</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {techStack.map((tech, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-purple-400 mb-4">{tech.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {tech.items.map((item, itemIndex) => (
-                    <span key={itemIndex} className="px-3 py-1 bg-purple-900/30 border border-purple-500/30 rounded-full text-sm text-gray-300">
+                    <span key={itemIndex} className="px-3 py-1 bg-gray-600/30 border border-gray-400/30 rounded-full text-sm text-gray-300">
                       {item}
                     </span>
                   ))}
@@ -152,7 +152,7 @@ const ExoplanetProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Key Features</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-purple-400 mb-4">{feature.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </div>
@@ -166,7 +166,7 @@ const ExoplanetProject = () => {
           
 
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
               <h3 className="text-xl font-semibold text-purple-400 mb-4">No Exoplanet Detection</h3>
               <div className="mb-4">
                 <img 
@@ -181,7 +181,7 @@ const ExoplanetProject = () => {
               </p>
             </div>
 
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
               <h3 className="text-xl font-semibold text-purple-400 mb-4">Exoplanet Transit Detection</h3>
               <div className="mb-4">
                 <img 
@@ -198,7 +198,7 @@ const ExoplanetProject = () => {
           </div>
 
 
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h3 className="text-xl font-semibold text-purple-400 mb-4 text-center">Model Performance Comparison</h3>
             <div className="mb-4">
               <img 
@@ -219,7 +219,7 @@ const ExoplanetProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Model Performance Results</h2>
           
 
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 mb-8 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 mb-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
@@ -245,13 +245,13 @@ const ExoplanetProject = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {modelResults.map((result, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 hover:border-purple-500/50 hover:bg-purple-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-purple-400 mb-2">{result.model}</h3>
                 <div className="flex flex-wrap gap-2 mb-2">
-                  <span className="px-2 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-xs text-green-400">
+                  <span className="px-2 py-1 bg-gray-600/30 border border-gray-400/30 rounded-full text-xs text-green-400">
                     {result.accuracy}
                   </span>
-                  <span className="px-2 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-xs text-blue-400">
+                  <span className="px-2 py-1 bg-gray-600/30 border border-gray-400/30 rounded-full text-xs text-blue-400">
                     F1: {result.f1Score}
                   </span>
                 </div>
@@ -263,12 +263,12 @@ const ExoplanetProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-1000">
-          <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm border border-gray-400/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-8 text-center">Key Achievements</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {project?.achievements.map((achievement, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300 leading-relaxed">{achievement}</p>
                 </div>
               ))}

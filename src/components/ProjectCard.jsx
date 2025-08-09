@@ -62,8 +62,7 @@ const ProjectCard = ({ project, cardType = "standard" }) => {
         
         {project.featured && (
           <div 
-            className="absolute top-4 right-4 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white"
-            style={{ backgroundColor: `${primaryColor}90` }}
+            className="absolute top-4 right-4 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 shadow-lg"
           >
             ⭐ Featured
           </div>

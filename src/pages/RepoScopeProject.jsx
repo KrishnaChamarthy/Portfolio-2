@@ -156,7 +156,7 @@ const RepoScopeProject = () => {
                 }
               }, 100);
             }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-blue-500/50 hover:bg-blue-900/20 transition-all duration-300"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-gray-400/50 hover:bg-gray-800/40 transition-all duration-300"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Projects</span>
@@ -204,7 +204,7 @@ const RepoScopeProject = () => {
             href={project?.links?.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg hover:shadow-lg hover:shadow-blue-400/30 transition-all duration-300"
+            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-gray-400 to-gray-300 text-gray-900 rounded-lg hover:shadow-lg hover:shadow-gray-400/30 transition-all duration-300"
           >
             <ExternalLink className="w-5 h-5" />
             <span>Live Demo</span>
@@ -213,7 +213,7 @@ const RepoScopeProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-400">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h2 className="text-3xl font-bold mb-6 text-center">Project Overview</h2>
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
@@ -239,7 +239,7 @@ const RepoScopeProject = () => {
 
         <div className="mb-16 animate-fade-in-up delay-450">
           <h2 className="text-3xl font-bold mb-8 text-center">Project Screenshots</h2>
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <div className="relative">
 
               <div className="relative overflow-hidden rounded-xl">
@@ -281,7 +281,7 @@ const RepoScopeProject = () => {
                     onClick={() => goToImage(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentImageIndex 
-                        ? 'bg-blue-400 scale-125' 
+                        ? 'bg-gray-400 scale-125' 
                         : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                     aria-label={`Go to image ${index + 1}`}
@@ -307,11 +307,11 @@ const RepoScopeProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Technology Stack</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {techStack.map((tech, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">{tech.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {tech.items.map((item, itemIndex) => (
-                    <span key={itemIndex} className="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-sm text-gray-300">
+                    <span key={itemIndex} className="px-3 py-1 bg-gray-600/30 border border-gray-400/30 rounded-full text-sm text-gray-300">
                       {item}
                     </span>
                   ))}
@@ -326,7 +326,7 @@ const RepoScopeProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Key Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-blue-400 mr-3" />
                   <h3 className="text-xl font-semibold text-blue-400">{feature.title}</h3>
@@ -342,7 +342,7 @@ const RepoScopeProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">AI Model Configuration</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {aiModels.map((model, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <div className="flex items-center mb-3">
                   <Cpu className="w-6 h-6 text-blue-400 mr-2" />
                   <h3 className="text-lg font-semibold text-blue-400">{model.model}</h3>
@@ -368,11 +368,11 @@ const RepoScopeProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">System Components</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {systemComponents.map((component, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-blue-400 mb-3">{component.component}</h3>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {component.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-2 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-xs text-blue-300">
+                    <span key={techIndex} className="px-2 py-1 bg-gray-600/30 border border-gray-400/30 rounded-full text-xs text-gray-300">
                       {tech}
                     </span>
                   ))}
@@ -388,7 +388,7 @@ const RepoScopeProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Performance Metrics</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {performanceMetrics.map((perf, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <div className="text-3xl font-bold text-blue-400 mb-2">{perf.value}</div>
                 <div className="text-lg font-semibold text-gray-200 mb-2">{perf.metric}</div>
                 <div className="text-sm text-gray-400">{perf.improvement}</div>
@@ -399,7 +399,7 @@ const RepoScopeProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-1000">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h2 className="text-3xl font-bold mb-8 text-center">System Architecture</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {systemArchitecture.map((layer, index) => (
@@ -411,7 +411,7 @@ const RepoScopeProject = () => {
                   <ul className="space-y-2">
                     {layer.components.map((component, compIndex) => (
                       <li key={compIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <span className="text-gray-300">{component}</span>
                       </li>
                     ))}
@@ -424,22 +424,22 @@ const RepoScopeProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-1100">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h2 className="text-3xl font-bold mb-8 text-center">Technical Implementation</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">Frontend Architecture</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>React Framework:</strong> Modern component-based architecture with hooks for state management and real-time updates</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>Interactive Dashboard:</strong> Dynamic visualizations for code metrics, search results, and AI analysis insights</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>Responsive Design:</strong> Mobile-first approach ensuring optimal experience across all devices</span>
                   </li>
                 </ul>
@@ -448,15 +448,15 @@ const RepoScopeProject = () => {
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">Backend Implementation</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>Microservices Architecture:</strong> Scalable Node.js services with Docker containerization for consistent deployment</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>PostgreSQL Integration:</strong> Advanced FTS5 full-text search with custom indexing strategies for code analysis</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>AI Integration:</strong> Ollama integration with custom embedding algorithms for semantic code understanding</span>
                   </li>
                 </ul>
@@ -467,12 +467,12 @@ const RepoScopeProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-1200">
-          <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-gray-400/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-8 text-center">Key Achievements</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {project?.achievements?.map((achievement, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300 leading-relaxed">{achievement}</p>
                 </div>
               ))}

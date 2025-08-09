@@ -127,7 +127,7 @@ const CampusCoreProject = () => {
                 }
               }, 100);
             }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-green-500/50 hover:bg-green-900/20 transition-all duration-300"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-gray-400/50 hover:bg-green-900/20 transition-all duration-300"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Projects</span>
@@ -175,7 +175,7 @@ const CampusCoreProject = () => {
             href={project?.links?.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg hover:shadow-lg hover:shadow-green-400/30 transition-all duration-300"
+            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-gray-400 to-gray-300 rounded-lg hover:shadow-lg hover:shadow-green-400/30 transition-all duration-300"
           >
             <ExternalLink className="w-5 h-5" />
             <span>Live Demo</span>
@@ -184,7 +184,7 @@ const CampusCoreProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-400">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 hover:bg-green-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h2 className="text-3xl font-bold mb-6 text-center">Project Overview</h2>
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
@@ -211,11 +211,11 @@ const CampusCoreProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Technology Stack</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {techStack.map((tech, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-green-500/50 hover:bg-green-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">{tech.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {tech.items.map((item, itemIndex) => (
-                    <span key={itemIndex} className="px-3 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-sm text-gray-300">
+                    <span key={itemIndex} className="px-3 py-1 bg-gray-600/30 border border-gray-400/30 rounded-full text-sm text-gray-300">
                       {item}
                     </span>
                   ))}
@@ -230,7 +230,7 @@ const CampusCoreProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Key Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-green-500/50 hover:bg-green-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-green-400 mr-3" />
                   <h3 className="text-xl font-semibold text-green-400">{feature.title}</h3>
@@ -244,7 +244,7 @@ const CampusCoreProject = () => {
 
         <div className="mb-16 animate-fade-in-up delay-700">
           <h2 className="text-3xl font-bold mb-8 text-center">Project Screenshots</h2>
-          <div className="border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
+          <div className="border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 transition-all duration-300">
             <div className="relative">
 
               <div className="relative overflow-hidden rounded-xl">
@@ -286,7 +286,7 @@ const CampusCoreProject = () => {
                     onClick={() => goToImage(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentImageIndex 
-                        ? 'bg-green-400 scale-125' 
+                        ? 'bg-gray-400 scale-125' 
                         : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                     aria-label={`Go to image ${index + 1}`}
@@ -309,12 +309,12 @@ const CampusCoreProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Project Modules</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {systemModules.map((module, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-green-500/50 hover:bg-green-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">{module.module}</h3>
                 <ul className="space-y-2">
                   {module.capabilities.map((capability, capIndex) => (
                     <li key={capIndex} className="flex items-start">
-                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-300">{capability}</span>
                     </li>
                   ))}
@@ -329,7 +329,7 @@ const CampusCoreProject = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Performance Metrics</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {performanceMetrics.map((perf, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 hover:bg-green-900/10 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
                 <div className="text-3xl font-bold text-green-400 mb-2">{perf.value}</div>
                 <div className="text-lg font-semibold text-gray-200 mb-2">{perf.metric}</div>
                 <div className="text-sm text-gray-400">{perf.improvement}</div>
@@ -340,7 +340,7 @@ const CampusCoreProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-1000">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 hover:bg-green-900/10 transition-all duration-300">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-400/50 hover:bg-gray-800/20 transition-all duration-300">
             <h2 className="text-3xl font-bold mb-8 text-center">Project Architecture</h2>
             
 
@@ -365,15 +365,15 @@ const CampusCoreProject = () => {
                 <h3 className="text-xl font-semibold text-green-400 mb-4">Frontend Architecture</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>React Framework:</strong> Component-based architecture with React Hooks for state management</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>Responsive Design:</strong> Mobile-first approach with CSS3 and responsive layouts</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>Dynamic Routing:</strong> React Router for seamless navigation between modules</span>
                   </li>
                 </ul>
@@ -382,15 +382,15 @@ const CampusCoreProject = () => {
                 <h3 className="text-xl font-semibold text-green-400 mb-4">Backend Architecture</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>Node.js Server:</strong> Express.js framework with RESTful API design</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>MongoDB Database:</strong> NoSQL database with Mongoose ODM for data modeling</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span><strong>JWT Authentication:</strong> Secure token-based authentication with role management</span>
                   </li>
                 </ul>
@@ -401,12 +401,12 @@ const CampusCoreProject = () => {
 
 
         <div className="mb-16 animate-fade-in-up delay-1100">
-          <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 backdrop-blur-sm border border-gray-400/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-8 text-center">Key Achievements</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {project?.achievements.map((achievement, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300 leading-relaxed">{achievement}</p>
                 </div>
               ))}

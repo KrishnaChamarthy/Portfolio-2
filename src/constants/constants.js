@@ -147,9 +147,9 @@ export const projects = [
         live: "https://github.com/KrishnaChamarthy/RepoScope"
       },
       colorTheme: {
-        primary: "#3B82F6",
-        secondary: "#1D4ED8",
-        accent: "#93C5FD"
+        primary: "#E5E7EB",
+        secondary: "#D1D5DB",
+        accent: "#F3F4F6"
       },
       description: "Engineered a code exploration platform using React, Node.js, and PostgreSQL with FTS5 full-text search, enabling efficient information retrieval across multi-language codebases containing 10,000+ files.",
       achievements: [
@@ -173,9 +173,9 @@ export const projects = [
         live: "https://erpsystem-krishna.netlify.app"
       },
       colorTheme: {
-        primary: "#10B981",
-        secondary: "#047857",
-        accent: "#6EE7B7"
+        primary: "#E5E7EB",
+        secondary: "#D1D5DB",
+        accent: "#F3F4F6"
       },
       description: "Built a full-stack college management system with 10+ integrated modules including student records, timetables, assignments, and faculty dashboards. Reduced API response times to under 200ms on average.",
       achievements: [
@@ -199,9 +199,9 @@ export const projects = [
         paper: "https://drive.google.com/file/d/1F9_1iBfC0GAnnqRsd1hD4podC1_qZ3Od/view?usp=sharing"
       },
       colorTheme: {
-        primary: "#8B5CF6",
-        secondary: "#7C3AED",
-        accent: "#C4B5FD"
+        primary: "#E5E7EB",
+        secondary: "#D1D5DB",
+        accent: "#F3F4F6"
       },
       description: "Improved an existing ML-based system for detecting and classifying exoplanets by implementing k-fold cross-validation, optimizing model architecture, and tuning hyperparameters using grid search.",
       achievements: [
@@ -226,9 +226,9 @@ export const projects = [
         live: "https://currexch-aidudbniw3gjmvwhgamqtp.streamlit.app"
       },
       colorTheme: {
-        primary: "#F59E0B",
-        secondary: "#D97706",
-        accent: "#FCD34D"
+        primary: "#E5E7EB",
+        secondary: "#D1D5DB",
+        accent: "#F3F4F6"
       },
       description: "An interactive web application developed with Streamlit and Python that allows users to convert currencies, view real-time exchange rates, analyze historical trends, and predict future currency rates using AI.",
       achievements: [
@@ -252,9 +252,9 @@ export const projects = [
         live: "https://github.com/KrishnaChamarthy/PathFindingAlgorithmVisalizer"
       },
       colorTheme: {
-        primary: "#EF4444",
-        secondary: "#DC2626",
-        accent: "#FCA5A5"
+        primary: "#E5E7EB",
+        secondary: "#D1D5DB",
+        accent: "#F3F4F6"
       },
       description: "An interactive web application built with React that enables users to explore and visualize various pathfinding algorithms, such as Depth-First Search, Breadth-First Search, Dijkstra's, A* and Greedy Best-Fit Search.",
       achievements: [
