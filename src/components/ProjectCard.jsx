@@ -13,6 +13,30 @@ const ProjectCard = ({ project, cardType = "standard" }) => {
   const secondaryColor = project.colorTheme?.secondary || "#1D4ED8";
   const accentColor = project.colorTheme?.accent || "#93C5FD";
 
+  // Define specific title gradients for each project
+  const getTitleGradient = (projectId) => {
+    const gradients = {
+      1: "linear-gradient(to right, #60A5FA, #22D3EE)", // RepoScope: blue to cyan
+      2: "linear-gradient(to right, #4ADE80, #34D399)", // CampusCore: green to emerald
+      3: "linear-gradient(to right, #A78BFA, #60A5FA)", // Exoplanet: purple to blue
+      4: "linear-gradient(to right, #FBBF24, #FB923C)", // CurrExch: yellow to orange
+      5: "linear-gradient(to right, #F87171, #FB7185)"  // PathFinder: red to rose
+    };
+    return gradients[projectId] || "linear-gradient(to right, #60A5FA, #22D3EE)";
+  };
+
+  // Get specific colors for tech stack elements
+  const getTechStackColors = (projectId) => {
+    const colors = {
+      1: { primary: "#60A5FA", accent: "#22D3EE" }, // RepoScope: blue/cyan
+      2: { primary: "#4ADE80", accent: "#34D399" }, // CampusCore: green/emerald
+      3: { primary: "#A78BFA", accent: "#60A5FA" }, // Exoplanet: purple/blue
+      4: { primary: "#FBBF24", accent: "#FB923C" }, // CurrExch: yellow/orange
+      5: { primary: "#F87171", accent: "#FB7185" }  // PathFinder: red/rose
+    };
+    return colors[projectId] || colors[1];
+  };
+
   const isWide = cardType === "wide";
   
   const navigateToProject = () => {
@@ -83,7 +107,7 @@ const ProjectCard = ({ project, cardType = "standard" }) => {
           <h3 
             className="text-3xl font-bold bg-clip-text text-transparent transition-colors duration-300"
             style={{
-              backgroundImage: `linear-gradient(to right, ${primaryColor}, ${secondaryColor})`
+              backgroundImage: getTitleGradient(project.id)
             }}
           >
             {project.title}
@@ -91,7 +115,7 @@ const ProjectCard = ({ project, cardType = "standard" }) => {
           <div 
             className="absolute -bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 ease-out origin-left"
             style={{
-              background: `linear-gradient(to right, ${primaryColor}, ${secondaryColor})`
+              background: getTitleGradient(project.id)
             }}
           />
         </div>
@@ -101,19 +125,22 @@ const ProjectCard = ({ project, cardType = "standard" }) => {
         </p>
         
         <div className="flex flex-wrap gap-3">
-          {project.tech?.map((tech, techIndex) => (
-            <span 
-              key={techIndex}
-              className="px-4 py-2 border text-sm font-medium rounded-full transition-all duration-300 hover:scale-105"
-              style={{
-                backgroundColor: `${primaryColor}20`,
-                borderColor: `${accentColor}50`,
-                color: accentColor
-              }}
-            >
-              {tech}
-            </span>
-          ))}
+          {project.tech?.map((tech, techIndex) => {
+            const techColors = getTechStackColors(project.id);
+            return (
+              <span 
+                key={techIndex}
+                className="px-4 py-2 border text-sm font-medium rounded-full transition-all duration-300 hover:scale-105"
+                style={{
+                  backgroundColor: `${techColors.primary}20`,
+                  borderColor: `${techColors.accent}50`,
+                  color: techColors.accent
+                }}
+              >
+                {tech}
+              </span>
+            );
+          })}
         </div>
         
         <div className="flex justify-between items-center pt-4">
