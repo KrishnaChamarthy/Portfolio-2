@@ -35,6 +35,29 @@ import RP5 from "../assets/RepoScope/RP5.png";
 import RP6 from "../assets/RepoScope/RP6.png";
 import RP7 from "../assets/RepoScope/RP7.png";
 
+import CMS1 from "../assets/CampusCore/CMS1.png";
+import CMS2 from "../assets/CampusCore/CMS2.png";
+import CMS3 from "../assets/CampusCore/CMS3.png";
+import CMS4 from "../assets/CampusCore/CMS4.png";
+import CMS5 from "../assets/CampusCore/CMS5.png";
+import CMS6 from "../assets/CampusCore/CMS6.png";
+import CMS7 from "../assets/CampusCore/CMS7.png";
+import CMS8 from "../assets/CampusCore/CMS8.png";
+import CMS9 from "../assets/CampusCore/CMS9.png";
+import CMS10 from "../assets/CampusCore/CMS10.png";
+import CMS11 from "../assets/CampusCore/CMS11.png";
+import CMS12 from "../assets/CampusCore/CMS12.png";
+
+import CEX1 from "../assets/CurrExch/CEX1.png";
+import CEX2 from "../assets/CurrExch/CEX2.png";
+import CEX3 from "../assets/CurrExch/CEX3.png";
+import CEX4 from "../assets/CurrExch/CEX4.png";
+import CEX5 from "../assets/CurrExch/CEX5.png";
+
+import ExoNo from "../assets/Exoplanet/Exo-No.png";
+import ExoYes from "../assets/Exoplanet/Exo-Yes.png";
+import ExoResult from "../assets/Exoplanet/result.png";
+
 import PFA1 from "../assets/PathFinding/PFA1.mp4";
 import PFA2 from "../assets/PathFinding/PFA2.mp4";
 import PFA3 from "../assets/PathFinding/PFA3.mp4";
@@ -294,7 +317,7 @@ export const contactMethods = [
 
 export const socialLinks = [
   { icon: Linkedin, href: "https://linkedin.com/in/krishna-chamarthy" },
-  { icon: Mail, href: "mailto:krishna.chamarthy@example.com" }
+  { icon: Mail, href: "mailto:chamarthysr@gmail.com" }
 ];
 
 export const heroInfo = {
@@ -305,6 +328,22 @@ export const heroInfo = {
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/krishna-chamarthy-291409187/",
     github: "https://github.com/KrishnaChamarthy"
+  },
+  codingProfiles: {
+    leetcode: {
+      username: "chamarthysr", 
+      rating: "1850+", 
+      badge: "Knight", 
+      profileUrl: "https://leetcode.com/u/chamarthysr", 
+      color: "#FFA116"
+    },
+    codeforces: {
+      username: "DraGon9236", 
+      rating: "1400+", 
+      badge: "Specialist", 
+      profileUrl: "https://codeforces.com/profile/DraGon9236 ", 
+      color: "#1F8ACB"
+    }
   }
 };
 
@@ -383,5 +422,134 @@ export const REPOSCOPE_PICS = [
     alt: "User Repositories Dashboard",
     title: "User Repositories",
     description: "Personal repository dashboard displaying user's GitHub repositories with management and access controls"
+  }
+];
+
+export const CAMPUSCORE_PICS = [
+  { 
+    src: CMS1, 
+    alt: "Student Login In Screen",
+    title: "Student Login",
+    description: "Secure student authentication interface with role-based access control"
+  },
+  { 
+    src: CMS2, 
+    alt: "Faculty Login In Screen",
+    title: "Faculty Login", 
+    description: "Faculty authentication portal with administrative privileges"
+  },
+  { 
+    src: CMS3, 
+    alt: "Student Profile",
+    title: "Student Profile",
+    description: "Comprehensive student profile management with personal and academic information"
+  },
+  { 
+    src: CMS4, 
+    alt: "Student Attendance Screen",
+    title: "Attendance Tracking",
+    description: "Real-time attendance monitoring and historical attendance records"
+  },
+  { 
+    src: CMS5, 
+    alt: "Student TimeTable",
+    title: "Schedule Management",
+    description: "Interactive timetable with class schedules and academic calendar integration"
+  },
+  { 
+    src: CMS6, 
+    alt: "Student Markssheet",
+    title: "Academic Records",
+    description: "Detailed grade reports and academic performance analytics"
+  },
+  { 
+    src: CMS7, 
+    alt: "Student Assignments",
+    title: "Assignment Portal",
+    description: "Assignment submission and tracking system with deadline management"
+  },
+  { 
+    src: CMS8, 
+    alt: "Faculty Attendance Assignment",
+    title: "Faculty Attendance",
+    description: "Faculty tools for marking and managing student attendance records"
+  },
+  { 
+    src: CMS9, 
+    alt: "Faculty Marks Assignment",
+    title: "Grade Management",
+    description: "Faculty interface for entering and managing student grades and assessments"
+  },
+  { 
+    src: CMS10, 
+    alt: "Faculty Homework Assignment",
+    title: "Assignment Creation",
+    description: "Faculty dashboard for creating and managing homework assignments"
+  },
+  { 
+    src: CMS11, 
+    alt: "Admin Circulars Posting",
+    title: "Administrative Notices",
+    description: "Administrative interface for posting circulars and important announcements"
+  },
+  { 
+    src: CMS12, 
+    alt: "Admin Add Students",
+    title: "Student Management",
+    description: "Administrative tools for student registration and profile management"
+  }
+];
+
+export const CURREXCH_PICS = [
+  { 
+    src: CEX1, 
+    alt: "CurrExch Main Dashboard - Currency Conversion Interface",
+    title: "Main Dashboard",
+    description: "Primary currency conversion interface with real-time exchange rates"
+  },
+  { 
+    src: CEX2, 
+    alt: "Real-time Exchange Rates Display",
+    title: "Exchange Rates",
+    description: "Live currency exchange rates with market data visualization"
+  },
+  { 
+    src: CEX3, 
+    alt: "Historical Currency Trend Analysis",
+    title: "Trend Analysis",
+    description: "Historical currency trends and pattern analysis tools"
+  },
+  { 
+    src: CEX4, 
+    alt: "Interactive Currency Comparison Charts",
+    title: "Comparison Charts",
+    description: "Interactive charts for comparing multiple currencies and market trends"
+  },
+  { 
+    src: CEX5, 
+    alt: "Future Rate Prediction Visualizations",
+    title: "Rate Predictions",
+    description: "Machine learning-powered currency rate predictions and forecasting"
+  }
+];
+
+export const EXOPLANET_PICS = [
+  { 
+    src: ExoNo, 
+    alt: "Exoplanet Detection - Negative Result",
+    title: "No Exoplanet Detected",
+    description: "Analysis result showing no exoplanet detected in the stellar light curve"
+  },
+  { 
+    src: ExoYes, 
+    alt: "Exoplanet Detection - Positive Result",
+    title: "Exoplanet Detected",
+    description: "Successful exoplanet detection with transit signature in light curve data"
+  },
+  { 
+    src: ExoResult, 
+    alt: "Exoplanet Analysis Results",
+    title: "Analysis Results",
+    description: "Comprehensive analysis results and classification metrics for exoplanet detection"
   }
 ];

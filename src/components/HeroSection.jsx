@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, ChevronDown } from 'lucide-react';
+import { ExternalLink, ChevronDown, Code, Trophy } from 'lucide-react';
 import profileImg from '../assets/KC_Profile_Img.jpeg';
 import resumePdf from '../assets/KC_Resume.pdf';
 import { FaGithub, FaLinkedin, FaLocationDot } from "react-icons/fa6";
@@ -55,6 +55,92 @@ const HeroSection = () => {
           <div className="animate-fade-in-up delay-300 mt-4 flex items-center justify-center md:justify-start gap-2">
             <FaLocationDot className="text-lg text-purple-400" />
             <span className="text-gray-400 text-base">{heroInfo.location}</span>
+          </div>
+
+          <div className="animate-fade-in-up delay-350 mt-6">
+            <div className="flex justify-center md:justify-start space-x-4">
+              <a
+                href={heroInfo.codingProfiles.leetcode.profileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-3 px-4 py-3 rounded-lg border border-gray-700/50 bg-gray-900/30 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300 transform hover:scale-105"
+                style={{
+                  background: `linear-gradient(135deg, ${heroInfo.codingProfiles.leetcode.color}15, ${heroInfo.codingProfiles.leetcode.color}05)`
+                }}
+              >
+                <div 
+                  className="w-8 h-8 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: `${heroInfo.codingProfiles.leetcode.color}20` }}
+                >
+                  <Code 
+                    className="w-5 h-5"
+                    style={{ color: heroInfo.codingProfiles.leetcode.color }}
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="text-xs text-gray-400">LeetCode</div>
+                  <div className="flex items-center space-x-2">
+                    <span 
+                      className="text-sm font-semibold"
+                      style={{ color: heroInfo.codingProfiles.leetcode.color }}
+                    >
+                      {heroInfo.codingProfiles.leetcode.rating}
+                    </span>
+                    <span 
+                      className="text-xs px-2 py-0.5 rounded-full"
+                      style={{ 
+                        backgroundColor: `${heroInfo.codingProfiles.leetcode.color}20`,
+                        color: heroInfo.codingProfiles.leetcode.color 
+                      }}
+                    >
+                      {heroInfo.codingProfiles.leetcode.badge}
+                    </span>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-400 transition-colors" />
+              </a>
+
+              <a
+                href={heroInfo.codingProfiles.codeforces.profileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-3 px-4 py-3 rounded-lg border border-gray-700/50 bg-gray-900/30 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"
+                style={{
+                  background: `linear-gradient(135deg, ${heroInfo.codingProfiles.codeforces.color}15, ${heroInfo.codingProfiles.codeforces.color}05)`
+                }}
+              >
+                <div 
+                  className="w-8 h-8 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: `${heroInfo.codingProfiles.codeforces.color}20` }}
+                >
+                  <Trophy 
+                    className="w-5 h-5"
+                    style={{ color: heroInfo.codingProfiles.codeforces.color }}
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="text-xs text-gray-400">Codeforces</div>
+                  <div className="flex items-center space-x-2">
+                    <span 
+                      className="text-sm font-semibold"
+                      style={{ color: heroInfo.codingProfiles.codeforces.color }}
+                    >
+                      {heroInfo.codingProfiles.codeforces.rating}
+                    </span>
+                    <span 
+                      className="text-xs px-2 py-0.5 rounded-full"
+                      style={{ 
+                        backgroundColor: `${heroInfo.codingProfiles.codeforces.color}20`,
+                        color: heroInfo.codingProfiles.codeforces.color 
+                      }}
+                    >
+                      {heroInfo.codingProfiles.codeforces.badge}
+                    </span>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-400 transition-colors" />
+              </a>
+            </div>
           </div>
 
           <div className="animate-fade-in-up delay-400 flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6 mt-8">

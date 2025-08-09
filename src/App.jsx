@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isManualNavigation, setIsManualNavigation] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -18,36 +19,52 @@ const App = () => {
     };
 
     let ticking = false;
+    let scrollTimeout;
+
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const sections = [
-            { id: 'hero', name: 'home' },
-            { id: 'skills', name: 'skills' },
-            { id: 'experiences', name: 'experiences' },
-            { id: 'projects', name: 'projects' },
-            { id: 'contact', name: 'contact' }
-          ];
+      if (isManualNavigation) return;
 
-          const scrollPosition = window.scrollY + window.innerHeight / 3;
+      clearTimeout(scrollTimeout);
 
-          let currentSection = 'home';
+      scrollTimeout = setTimeout(() => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const sections = [
+              { id: 'hero', name: 'home' },
+              { id: 'skills', name: 'skills' },
+              { id: 'experiences', name: 'experiences' },
+              { id: 'projects', name: 'projects' },
+              { id: 'contact', name: 'contact' }
+            ];
 
-          sections.forEach(({ id, name }) => {
-            const element = document.getElementById(id);
-            if (element) {
-              const rect = element.getBoundingClientRect();
-              if (rect.top <= window.innerHeight / 3 && rect.bottom >= 0) {
-                currentSection = name;
+            let currentSection = 'home';
+            let maxVisibility = 0;
+
+            sections.forEach(({ id, name }) => {
+              const element = document.getElementById(id);
+              if (element) {
+                const rect = element.getBoundingClientRect();
+                const elementHeight = rect.height;
+                const viewportHeight = window.innerHeight;
+                
+                const visibleTop = Math.max(0, -rect.top);
+                const visibleBottom = Math.min(elementHeight, viewportHeight - rect.top);
+                const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                const visibilityRatio = visibleHeight / elementHeight;
+
+                if (visibilityRatio > maxVisibility && visibilityRatio > 0.3) {
+                  maxVisibility = visibilityRatio;
+                  currentSection = name;
+                }
               }
-            }
-          });
+            });
 
-          setActiveSection(currentSection);
-          ticking = false;
-        });
-        ticking = true;
-      }
+            setActiveSection(currentSection);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, 100);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -58,13 +75,27 @@ const App = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
     };
-  }, []);
+  }, [isManualNavigation]);
+
+  const handleManualNavigation = (section) => {
+    setActiveSection(section);
+    setIsManualNavigation(true);
+    
+    setTimeout(() => {
+      setIsManualNavigation(false);
+    }, 1500);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-x-hidden">
       <ContinuousBackground mousePosition={mousePosition} />
-      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Navigation 
+        activeSection={activeSection} 
+        setActiveSection={setActiveSection}
+        onManualNavigation={handleManualNavigation}
+      />
       <div id="hero">
         <HeroSection />
       </div>

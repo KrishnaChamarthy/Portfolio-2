@@ -1,9 +1,9 @@
 import React from 'react';
 import { navigationItems } from '../constants/constants';
 
-const Navigation = ({ activeSection, setActiveSection }) => {
+const Navigation = ({ activeSection, setActiveSection, onManualNavigation }) => {
   const handleSectionClick = (section) => {
-    setActiveSection(section);
+    onManualNavigation(section);
     
     const sectionId = section === 'home' ? 'hero' : section;
     const element = document.getElementById(sectionId);
@@ -23,7 +23,7 @@ const Navigation = ({ activeSection, setActiveSection }) => {
           <button
             key={section}
             onClick={() => handleSectionClick(section)}
-            className={`relative px-3 md:px-5 py-2 md:py-2.5 rounded-full capitalize transition-all duration-200 transform text-xs md:text-sm font-medium whitespace-nowrap ${
+            className={`relative px-3 md:px-5 py-2 md:py-2.5 rounded-full capitalize transition-all duration-300 ease-out transform text-xs md:text-sm font-medium whitespace-nowrap ${
               activeSection === section 
                 ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-xl shadow-purple-500/30 scale-105' 
                 : 'text-gray-300 hover:text-white hover:bg-white/5 hover:scale-105'

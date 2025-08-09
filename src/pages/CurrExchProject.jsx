@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Github, ExternalLink, TrendingUp, DollarSign, BarChart3, Smartphone, Globe, Calculator, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projects } from '../constants/constants';
+import { projects, CURREXCH_PICS } from '../constants/constants';
 
 const CurrExchProject = () => {
   const project = projects.find(p => p.id === 4);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-
-  const carouselImages = [
-    { src: "/src/assets/CurrExch/CEX1.png", alt: "CurrExch Main Dashboard - Currency Conversion Interface" },
-    { src: "/src/assets/CurrExch/CEX2.png", alt: "Real-time Exchange Rates Display" },
-    { src: "/src/assets/CurrExch/CEX3.png", alt: "Historical Currency Trend Analysis" },
-    { src: "/src/assets/CurrExch/CEX4.png", alt: "Interactive Currency Comparison Charts" },
-    { src: "/src/assets/CurrExch/CEX5.png", alt: "Future Rate Prediction Visualizations" }
-  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,13 +14,13 @@ const CurrExchProject = () => {
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+      prevIndex === CURREXCH_PICS.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+      prevIndex === 0 ? CURREXCH_PICS.length - 1 : prevIndex - 1
     );
   };
 
@@ -247,8 +238,8 @@ const CurrExchProject = () => {
 
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src={carouselImages[currentImageIndex].src}
-                  alt={carouselImages[currentImageIndex].alt}
+                  src={CURREXCH_PICS[currentImageIndex].src}
+                  alt={CURREXCH_PICS[currentImageIndex].alt}
                   className="w-full h-auto max-h-96 object-contain bg-gray-900/50 rounded-lg"
                 />
                 
@@ -272,13 +263,13 @@ const CurrExchProject = () => {
 
               <div className="text-center mt-4">
                 <span className="text-gray-400 text-sm">
-                  {currentImageIndex + 1} of {carouselImages.length}
+                  {currentImageIndex + 1} of {CURREXCH_PICS.length}
                 </span>
               </div>
 
 
               <div className="flex justify-center mt-4 space-x-2 overflow-x-auto pb-2">
-                {carouselImages.map((_, index) => (
+                {CURREXCH_PICS.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => goToImage(index)}
@@ -295,7 +286,7 @@ const CurrExchProject = () => {
 
               <div className="text-center mt-4">
                 <p className="text-gray-300 text-sm">
-                  {carouselImages[currentImageIndex].alt}
+                  {CURREXCH_PICS[currentImageIndex].alt}
                 </p>
               </div>
             </div>

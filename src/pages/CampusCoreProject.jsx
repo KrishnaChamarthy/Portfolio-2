@@ -1,27 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Github, ExternalLink, Users, Calendar, FileText, Award, Database, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projects } from '../constants/constants';
+import { projects, CAMPUSCORE_PICS } from '../constants/constants';
 
 const CampusCoreProject = () => {
   const project = projects.find(p => p.id === 2);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-
-  const carouselImages = [
-    { src: "/src/assets/CampusCore/CMS1.png", alt: "Student Login In Screen" },
-    { src: "/src/assets/CampusCore/CMS2.png", alt: "Faculty Login In Screen" },
-    { src: "/src/assets/CampusCore/CMS3.png", alt: "Student Profile" },
-    { src: "/src/assets/CampusCore/CMS4.png", alt: "Student Attendance Screen" },
-    { src: "/src/assets/CampusCore/CMS5.png", alt: "Student TimeTable" },
-    { src: "/src/assets/CampusCore/CMS6.png", alt: "Student Markssheet" },
-    { src: "/src/assets/CampusCore/CMS7.png", alt: "Student Assignments" },
-    { src: "/src/assets/CampusCore/CMS8.png", alt: "Faculty Attendance Assignement" },
-    { src: "/src/assets/CampusCore/CMS9.png", alt: "Faculty Marks Assignement" },
-    { src: "/src/assets/CampusCore/CMS10.png", alt: "Faculty Homework Assignement" },
-    { src: "/src/assets/CampusCore/CMS11.png", alt: "Admin Circulars Posting" },
-    { src: "/src/assets/CampusCore/CMS12.png", alt: "Admin Add Students" }
-  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,13 +14,13 @@ const CampusCoreProject = () => {
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+      prevIndex === CAMPUSCORE_PICS.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+      prevIndex === 0 ? CAMPUSCORE_PICS.length - 1 : prevIndex - 1
     );
   };
 
@@ -249,8 +233,8 @@ const CampusCoreProject = () => {
 
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src={carouselImages[currentImageIndex].src}
-                  alt={carouselImages[currentImageIndex].alt}
+                  src={CAMPUSCORE_PICS[currentImageIndex].src}
+                  alt={CAMPUSCORE_PICS[currentImageIndex].alt}
                   className="w-full h-auto max-h-96 object-contain bg-gray-900/50 rounded-lg"
                 />
                 
@@ -274,13 +258,13 @@ const CampusCoreProject = () => {
 
               <div className="text-center mt-4">
                 <span className="text-gray-400 text-sm">
-                  {currentImageIndex + 1} of {carouselImages.length}
+                  {currentImageIndex + 1} of {CAMPUSCORE_PICS.length}
                 </span>
               </div>
 
 
               <div className="flex justify-center mt-4 space-x-2 overflow-x-auto pb-2">
-                {carouselImages.map((_, index) => (
+                {CAMPUSCORE_PICS.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => goToImage(index)}
@@ -297,7 +281,7 @@ const CampusCoreProject = () => {
 
               <div className="text-center mt-4">
                 <p className="text-gray-300 text-sm">
-                  {carouselImages[currentImageIndex].alt}
+                  {CAMPUSCORE_PICS[currentImageIndex].alt}
                 </p>
               </div>
             </div>

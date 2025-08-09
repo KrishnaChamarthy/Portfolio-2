@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { ArrowLeft, Github, FileText, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projects } from '../constants/constants';
+import { projects, EXOPLANET_PICS } from '../constants/constants';
 
 const ExoplanetProject = () => {
   const project = projects.find(p => p.id === 3);
@@ -170,8 +170,8 @@ const ExoplanetProject = () => {
               <h3 className="text-xl font-semibold text-purple-400 mb-4">No Exoplanet Detection</h3>
               <div className="mb-4">
                 <img 
-                  src="/src/assets/Exoplanet/Exo-No.png" 
-                  alt="Light curve showing no exoplanet transit - stable flux measurements over time"
+                  src={EXOPLANET_PICS[0].src}
+                  alt={EXOPLANET_PICS[0].alt}
                   className="w-full h-auto rounded-lg border border-gray-600/50"
                 />
               </div>
@@ -185,8 +185,8 @@ const ExoplanetProject = () => {
               <h3 className="text-xl font-semibold text-purple-400 mb-4">Exoplanet Transit Detection</h3>
               <div className="mb-4">
                 <img 
-                  src="/src/assets/Exoplanet/Exo-Yes.png" 
-                  alt="Light curve showing clear exoplanet transits - periodic flux dips indicating planetary orbits"
+                  src={EXOPLANET_PICS[1].src}
+                  alt={EXOPLANET_PICS[1].alt}
                   className="w-full h-auto rounded-lg border border-gray-600/50"
                 />
               </div>
@@ -202,8 +202,8 @@ const ExoplanetProject = () => {
             <h3 className="text-xl font-semibold text-purple-400 mb-4 text-center">Model Performance Comparison</h3>
             <div className="mb-4">
               <img 
-                src="/src/assets/Exoplanet/result.png" 
-                alt="Comprehensive model performance comparison showing accuracy and F1 scores across CNN, Random Forest, LightGBM, Logistic Regression, and SVC models"
+                src={EXOPLANET_PICS[2].src}
+                alt={EXOPLANET_PICS[2].alt}
                 className="w-full h-auto rounded-lg border border-gray-600/50 max-w-4xl mx-auto"
               />
             </div>
