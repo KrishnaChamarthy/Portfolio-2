@@ -13,26 +13,24 @@ const ProjectCard = ({ project, cardType = "standard" }) => {
   const secondaryColor = project.colorTheme?.secondary || "#1D4ED8";
   const accentColor = project.colorTheme?.accent || "#93C5FD";
 
-  // Define specific title gradients for each project
   const getTitleGradient = (projectId) => {
     const gradients = {
-      1: "linear-gradient(to right, #60A5FA, #22D3EE)", // RepoScope: blue to cyan
-      2: "linear-gradient(to right, #4ADE80, #34D399)", // CampusCore: green to emerald
-      3: "linear-gradient(to right, #A78BFA, #60A5FA)", // Exoplanet: purple to blue
-      4: "linear-gradient(to right, #FBBF24, #FB923C)", // CurrExch: yellow to orange
-      5: "linear-gradient(to right, #F87171, #FB7185)"  // PathFinder: red to rose
+      1: "linear-gradient(to right, #60A5FA, #22D3EE)", 
+      2: "linear-gradient(to right, #4ADE80, #34D399)", 
+      3: "linear-gradient(to right, #A78BFA, #60A5FA)", 
+      4: "linear-gradient(to right, #FBBF24, #FB923C)", 
+      5: "linear-gradient(to right, #F87171, #FB7185)"  
     };
     return gradients[projectId] || "linear-gradient(to right, #60A5FA, #22D3EE)";
   };
 
-  // Get specific colors for tech stack elements
   const getTechStackColors = (projectId) => {
     const colors = {
-      1: { primary: "#60A5FA", accent: "#22D3EE" }, // RepoScope: blue/cyan
-      2: { primary: "#4ADE80", accent: "#34D399" }, // CampusCore: green/emerald
-      3: { primary: "#A78BFA", accent: "#60A5FA" }, // Exoplanet: purple/blue
-      4: { primary: "#FBBF24", accent: "#FB923C" }, // CurrExch: yellow/orange
-      5: { primary: "#F87171", accent: "#FB7185" }  // PathFinder: red/rose
+      1: { primary: "#60A5FA", accent: "#22D3EE" }, 
+      2: { primary: "#4ADE80", accent: "#34D399" }, 
+      3: { primary: "#A78BFA", accent: "#60A5FA" }, 
+      4: { primary: "#FBBF24", accent: "#FB923C" }, 
+      5: { primary: "#F87171", accent: "#FB7185" }  
     };
     return colors[projectId] || colors[1];
   };
