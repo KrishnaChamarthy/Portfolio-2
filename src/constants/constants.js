@@ -47,6 +47,7 @@ import CMS9 from "../assets/CampusCore/CMS9.png";
 import CMS10 from "../assets/CampusCore/CMS10.png";
 import CMS11 from "../assets/CampusCore/CMS11.png";
 import CMS12 from "../assets/CampusCore/CMS12.png";
+import CMS_ERD from "../assets/CampusCore/CMS_ERD.png";
 
 import CEX1 from "../assets/CurrExch/CEX1.png";
 import CEX2 from "../assets/CurrExch/CEX2.png";
@@ -499,6 +500,8 @@ export const CAMPUSCORE_PICS = [
     description: "Administrative tools for student registration and profile management"
   }
 ];
+
+export const CMS_ERD_IMAGE = CMS_ERD;
 
 export const CURREXCH_PICS = [
   { 

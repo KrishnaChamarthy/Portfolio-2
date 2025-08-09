@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Github, ExternalLink, Users, Calendar, FileText, Award, Database, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projects, CAMPUSCORE_PICS } from '../constants/constants';
+import { projects, CAMPUSCORE_PICS, CMS_ERD_IMAGE } from '../constants/constants';
 
 const CampusCoreProject = () => {
   const project = projects.find(p => p.id === 2);
@@ -332,7 +332,7 @@ const CampusCoreProject = () => {
               <h3 className="text-2xl font-semibold text-green-400 mb-6 text-center">Entity Relationship Diagram</h3>
               <div className="bg-green-50/95 rounded-xl p-4 mb-6 max-w-4xl mx-auto">
                 <img 
-                  src="/src/assets/CampusCore/CMS_ERD.png"
+                  src={CMS_ERD_IMAGE}
                   alt="CampusCore Database Entity Relationship Diagram showing relationships between Students, Faculty, Courses, Assignments, and other system entities"
                   className="w-full h-auto rounded-lg max-h-96 object-contain"
                 />
