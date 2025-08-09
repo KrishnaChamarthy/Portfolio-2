@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 
 const ContinuousBackground = ({ mousePosition }) => {
-  // Generate stable particle data that won't change on re-renders
   const particles = useMemo(() => {
     return Array.from({ length: 100 }).map((_, i) => ({
       id: i,
